@@ -18,7 +18,7 @@ docker run -d \
 
 **Windows PowerShell:**
 ```powershell
-docker run -d --name cogirihub-postgres -e POSTGRES_DB=cogirihub -e POSTGRES_USER=cogirihub -e POSTGRES_PASSWORD=12341234 -p 5432:5432 -v postgres_data:/var/lib/postgresql/data postgres:15
+docker run -d --name cogirihub -e POSTGRES_DB=cogirihub -e POSTGRES_USER=cogirihub -e POSTGRES_PASSWORD=12341234 -p 5432:5432 -v postgres_data:/var/lib/postgresql/data postgres:15
 ```
 
 또는 PowerShell에서 백틱(`` ` ``) 사용:

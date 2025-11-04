@@ -18,4 +18,13 @@ spring:
         format_sql: true  
   web:
     resources:
-      static-locations: classpath:/static/  
+      static-locations: classpath:/static/
+
+# Swagger / OpenAPI Configuration
+springdoc:
+  api-docs:
+    path: /v3/api-docs
+  swagger-ui:
+    enabled: true
+    path: /swagger-ui.html
+  show-actuator: false 
