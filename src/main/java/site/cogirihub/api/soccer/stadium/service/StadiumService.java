@@ -9,8 +9,6 @@ public interface StadiumService {
 
     Messenger save(StadiumDTO stadiumDTO);
 
-    Messenger saveAll(List<StadiumDTO> stadiumDTOs);
-
     Messenger update(StadiumDTO stadiumDTO);
 
     Messenger delete(String id);
@@ -18,4 +16,6 @@ public interface StadiumService {
     Messenger findById(String id);
 
     Messenger findAll();
+
+    Messenger saveAll(List<StadiumDTO> stadiumDTOs);
 }

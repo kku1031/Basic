@@ -2,8 +2,11 @@ package site.cogirihub.api.soccer.player.domain;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
+import jakarta.persistence.JoinColumn;
+import jakarta.persistence.ManyToOne;
 import jakarta.persistence.Table;
 import lombok.Data;
+import site.cogirihub.api.soccer.team.domain.Team;
 
 @Data
 @Entity
@@ -11,7 +14,7 @@ import lombok.Data;
 public class Player {
 
     @Id
-    private Long id;
+    private Long playerId;
     private String playerName;
     private String ePlayerName;
     private String nickname;
@@ -23,6 +26,10 @@ public class Player {
     private String solar;
     private String height;
     private String weight;
-    private String teamId;
+
+    @ManyToOne
+    @JoinColumn(name = "team_id")
+    private Team team;
 
 }
+

@@ -21,7 +21,7 @@ public class PlayerServiceImpl implements PlayerService {
 
     @Override
     public Messenger saveAll(List<PlayerDTO> playerDTOs) {
-        return playerRepository.saveall(playerDTOs);
+        return playerRepository.saveAll(playerDTOs);
     }
 
     @Override

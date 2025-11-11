@@ -9,8 +9,6 @@ public interface TeamService {
 
     Messenger save(TeamDTO teamDTO);
 
-    Messenger saveAll(List<TeamDTO> teamDTOs);
-
     Messenger update(TeamDTO teamDTO);
 
     Messenger delete(String id);
@@ -18,4 +16,7 @@ public interface TeamService {
     Messenger findById(String id);
 
     Messenger findAll();
+
+    Messenger saveAll(List<TeamDTO> teamDTOs);
+    
 }

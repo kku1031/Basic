@@ -11,33 +11,45 @@ import site.cogirihub.api.soccer.player.domain.PlayerDTO;
 public class PlayerRepository {
 
     public Messenger save(PlayerDTO playerDTO) {
-        Messenger messenger = new Messenger(200, "Success");
-        return new Messenger(200, "Success");
-    }
-
-    public Messenger saveall(List<PlayerDTO> playerDTOs) {
-        Messenger messenger = new Messenger(200, "Success");
-        return messenger;
+        return Messenger.builder()
+                .code(200)
+                .message("success")
+                .build();
     }
 
     public Messenger update(PlayerDTO playerDTO) {
-        Messenger messenger = new Messenger(200, "Success");
-        return messenger;
+        return Messenger.builder()
+                .code(200)
+                .message("success")
+                .build();
     }
 
     public Messenger delete(String id) {
-        Messenger messenger = new Messenger(200, "Success");
-        return messenger;
+        return Messenger.builder()
+                .code(200)
+                .message("success")
+                .build();
     }
 
     public Messenger findById(String id) {
-        Messenger messenger = new Messenger(200, "Success");
-        return messenger;
+        return Messenger.builder()
+                .code(200)
+                .message("success")
+                .build();
     }
 
     public Messenger findAll() {
-        Messenger messenger = new Messenger(200, "Success");
-        return messenger;
+        return Messenger.builder()
+                .code(200)
+                .message("success")
+                .build();
+    }
+
+    public Messenger saveAll(List<PlayerDTO> playerDTOs) {
+        return Messenger.builder()
+                .code(200)
+                .message("success")
+                .build();
     }
 
     

@@ -12,17 +12,8 @@ import site.cogirihub.api.soccer.stadium.repository.StadiumRepository;
 @Service
 @RequiredArgsConstructor
 public class StadiumServiceImpl implements StadiumService {
+    
     private final StadiumRepository stadiumRepository;
-
-    @Override
-    public Messenger save(StadiumDTO stadiumDTO) {
-        return stadiumRepository.save(stadiumDTO);
-    }
-
-    @Override
-    public Messenger saveAll(List<StadiumDTO> stadiumDTOs) {
-        return stadiumRepository.saveall(stadiumDTOs);
-    }
 
     @Override
     public Messenger update(StadiumDTO stadiumDTO) {
@@ -42,6 +33,16 @@ public class StadiumServiceImpl implements StadiumService {
     @Override
     public Messenger findAll() {
         return stadiumRepository.findAll();
+    }
+
+    @Override
+    public Messenger saveAll(List<StadiumDTO> stadiumDTOs) {
+        return stadiumRepository.saveAll(stadiumDTOs);
+    }
+
+    @Override
+    public Messenger save(StadiumDTO stadiumDTO) {
+        return stadiumRepository.save(stadiumDTO);
     }
     
 }

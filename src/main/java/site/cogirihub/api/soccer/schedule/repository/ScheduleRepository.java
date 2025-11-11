@@ -11,32 +11,44 @@ import site.cogirihub.api.soccer.schedule.domain.ScheduleDTO;
 public class ScheduleRepository {
 
     public Messenger save(ScheduleDTO scheduleDTO) {
-        Messenger messenger = new Messenger(200, "Success");
-        return new Messenger(200, "Success");
-    }
-
-    public Messenger saveall(List<ScheduleDTO> scheduleDTOs) {
-        Messenger messenger = new Messenger(200, "Success");
-        return messenger;
+        return Messenger.builder()
+                .code(200)
+                .message("success")
+                .build();
     }
 
     public Messenger update(ScheduleDTO scheduleDTO) {
-        Messenger messenger = new Messenger(200, "Success");
-        return messenger;
+        return Messenger.builder()
+                .code(200)
+                .message("success")
+                .build();
     }
 
     public Messenger delete(String id) {
-        Messenger messenger = new Messenger(200, "Success");
-        return messenger;
+        return Messenger.builder()
+                .code(200)
+                .message("success")
+                .build();
     }
 
     public Messenger findById(String id) {
-        Messenger messenger = new Messenger(200, "Success");
-        return messenger;
+        return Messenger.builder()
+                .code(200)
+                .message("success")
+                .build();
     }
 
     public Messenger findAll() {
-        Messenger messenger = new Messenger(200, "Success");
-        return messenger;
+        return Messenger.builder()
+                .code(200)
+                .message("success")
+                .build();
+    }
+
+    public Messenger saveAll(List<ScheduleDTO> scheduleDTOs) {
+        return Messenger.builder()
+                .code(200)
+                .message("success")
+                .build();
     }
 }

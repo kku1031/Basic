@@ -15,16 +15,6 @@ public class TeamServiceImpl implements TeamService {
     private final TeamRepository teamRepository;
 
     @Override
-    public Messenger save(TeamDTO teamDTO) {
-        return teamRepository.save(teamDTO);
-    }
-
-    @Override
-    public Messenger saveAll(List<TeamDTO> teamDTOs) {
-        return teamRepository.saveall(teamDTOs);
-    }
-
-    @Override
     public Messenger update(TeamDTO teamDTO) {
         return teamRepository.update(teamDTO);
     }
@@ -42,6 +32,16 @@ public class TeamServiceImpl implements TeamService {
     @Override
     public Messenger findAll() {
         return teamRepository.findAll();
+    }
+
+    @Override
+    public Messenger saveAll(List<TeamDTO> teamDTOs) {
+        return teamRepository.saveAll(teamDTOs);
+    }
+
+    @Override
+    public Messenger save(TeamDTO teamDTO) {
+        return teamRepository.save(teamDTO);
     }
     
 }

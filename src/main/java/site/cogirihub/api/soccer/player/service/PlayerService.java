@@ -9,8 +9,6 @@ public interface PlayerService {
 
     Messenger save(PlayerDTO playerDTO);
 
-    Messenger saveAll(List<PlayerDTO> playerDTOs);
-
     Messenger update(PlayerDTO playerDTO);
 
     Messenger delete(String id);
@@ -18,6 +16,8 @@ public interface PlayerService {
     Messenger findById(String id);
 
     Messenger findAll();
+
+    Messenger saveAll(List<PlayerDTO> playerDTOs);
 
     
 }

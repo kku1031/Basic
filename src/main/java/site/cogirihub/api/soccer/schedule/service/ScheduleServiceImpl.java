@@ -15,16 +15,6 @@ public class ScheduleServiceImpl implements ScheduleService {
     private final ScheduleRepository scheduleRepository;
 
     @Override
-    public Messenger save(ScheduleDTO scheduleDTO) {
-        return scheduleRepository.save(scheduleDTO);
-    }
-
-    @Override
-    public Messenger saveAll(List<ScheduleDTO> scheduleDTOs) {
-        return scheduleRepository.saveall(scheduleDTOs);
-    }
-
-    @Override
     public Messenger update(ScheduleDTO scheduleDTO) {
         return scheduleRepository.update(scheduleDTO);
     }
@@ -42,6 +32,16 @@ public class ScheduleServiceImpl implements ScheduleService {
     @Override
     public Messenger findAll() {
         return scheduleRepository.findAll();
+    }
+
+    @Override
+    public Messenger saveAll(List<ScheduleDTO> scheduleDTOs) {
+        return scheduleRepository.saveAll(scheduleDTOs);
+    }
+
+    @Override
+    public Messenger save(ScheduleDTO scheduleDTO) {
+        return scheduleRepository.save(scheduleDTO);
     }
     
 }

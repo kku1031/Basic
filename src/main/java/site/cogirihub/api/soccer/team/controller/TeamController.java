@@ -2,10 +2,13 @@ package site.cogirihub.api.soccer.team.controller;
 
 import java.util.List;
 
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -22,32 +25,32 @@ public class TeamController {
     private final TeamService teamService;
 
     @PostMapping("/save")
-    public Messenger save(TeamDTO team) {
-        return teamService.save(team);
+    public ResponseEntity<Messenger> save(@RequestBody TeamDTO teamDTO) {
+        return ResponseEntity.ok(teamService.save(teamDTO));
     }
 
     @PostMapping("/all")
-    public Messenger saveAll(List<TeamDTO> teams) {
-        return teamService.saveAll(teams);
+    public ResponseEntity<Messenger> saveAll(@RequestBody List<TeamDTO> teamDTOs) {
+        return ResponseEntity.ok(teamService.saveAll(teamDTOs));
     }
 
-    @GetMapping("/all")
-    public Messenger findAll() {
-        return teamService.findAll();
-    }
-
-    @GetMapping("id/{id}")
-    public Messenger findById(String id) {
-        return teamService.findById(id);
-    }
-
-    @PutMapping("{id}")
-    public Messenger update(TeamDTO team) {
-        return teamService.update(team);
+    @PutMapping("/{id}")
+    public ResponseEntity<Messenger> update(@PathVariable String id, @RequestBody TeamDTO teamDTO) {
+        return ResponseEntity.ok(teamService.update(teamDTO));
     }
 
     @DeleteMapping("/{id}")
-    public Messenger delete(String id) {
-        return teamService.delete(id);
+    public ResponseEntity<Messenger> delete(@PathVariable String id) {
+        return ResponseEntity.ok(teamService.delete(id));
+    }
+
+    @GetMapping("/{id}")
+    public ResponseEntity<Messenger> findById(@PathVariable String id) {
+        return ResponseEntity.ok(teamService.findById(id));
+    }
+
+    @GetMapping("/all")
+    public ResponseEntity<Messenger> findAll() {
+        return ResponseEntity.ok(teamService.findAll());
     }
 }

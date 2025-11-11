@@ -9,8 +9,6 @@ public interface ScheduleService {
 
     Messenger save(ScheduleDTO scheduleDTO);
 
-    Messenger saveAll(List<ScheduleDTO> scheduleDTOs);
-
     Messenger update(ScheduleDTO scheduleDTO);
 
     Messenger delete(String id);
@@ -18,4 +16,6 @@ public interface ScheduleService {
     Messenger findById(String id);
 
     Messenger findAll();
+
+    Messenger saveAll(List<ScheduleDTO> scheduleDTOs);
 }
